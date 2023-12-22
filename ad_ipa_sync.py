@@ -165,7 +165,7 @@ def ipa_add_del_users_in_groups(ipaclient, ad_group_dict: dict, ipa_group_dict: 
 
 #-------------------------------------------------------------------------------------------------------------------
 if __name__ == '__main__':
-    load_dotenv('ad_ipa.conf')
+    load_dotenv('/opt/ad_ipa_sync/ad_freeipa_sync/ad_ipa.conf')
 
     # Получение строки серверов из переменной окружения
     ipaservers = os.getenv('ipa_server')
