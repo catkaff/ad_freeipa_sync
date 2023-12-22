@@ -165,7 +165,15 @@ def ipa_add_del_users_in_groups(ipaclient, ad_group_dict: dict, ipa_group_dict: 
 
 #-------------------------------------------------------------------------------------------------------------------
 if __name__ == '__main__':
-    load_dotenv('/opt/ad_ipa_sync/ad_freeipa_sync/ad_ipa.conf')
+
+    try:
+        load_dotenv('/opt/ad_ipa_sync/ad_freeipa_sync/ad_ipa.conf')
+    except Exception as e:
+        logging.error(f"Произошла ошибка: {e}")
+        sys.exit(1)
+    except FileNotFoundError as e:
+        logging.error(f"Произошла ошибка: {e}")
+        sys.exit(1)
 
     # Получение строки серверов из переменной окружения
     ipaservers = os.getenv('ipa_server')
