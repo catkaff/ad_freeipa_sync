@@ -6,7 +6,6 @@ from ldap3 import Connection, Server, ALL, Tls
 import sys, logging, ssl
 from python_freeipa import ClientMeta
 from python_freeipa.exceptions import FreeIPAError
-from pprint import pprint
 from python_freeipa.exceptions import DuplicateEntry
 from requests.exceptions import ConnectionError
 
