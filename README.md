@@ -59,3 +59,28 @@ The script uses SSL for connections. Ensure the correct SSL certificates are pro
 ### Python Environment
 Requires Python 3 and specific libraries (`ldap3`, `python_freeipa`, `dotenv`). Ensure these are installed in your Python environment.
 
+
+To install and set up the AD-FreeIPA synchronization script, follow these steps:
+
+1. **Create a Directory and Clone the Repository:**
+   ```bash
+   mkdir /opt/ad_ipa_sync
+   cd /opt/ad_ipa_sync
+   git clone https://github.com/catkaff/ad_freeipa_sync.git
+
+2. **Set Up Python Environment**
+   ```bash
+   python3.9 -m venv env
+   source env/bin/activate
+   pip install -r ad_freeipa_sync/requirements.txt
+   deactivate
+
+3. **Set Up Systemd Service and Timer**
+   ```bash
+   cp /opt/ad_ipa_sync/ad_freeipa_sync/ad_ipa_sync.service /etc/systemd/system/
+   cp /opt/ad_ipa_sync/ad_freeipa_sync/ad_ipa_sync.timer /etc/systemd/system/
+   systemctl daemon-reload
+   systemctl enable --now ad_ipa_sync.timer
+
+
+
