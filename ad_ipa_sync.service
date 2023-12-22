@@ -1,0 +1,9 @@
+[Unit]
+Description=Execute AD to IPA SYNC groups and AD users
+
+[Service]
+Type=simple
+ExecStart=/opt/ad_ipa_sync/ad_freeipa_sync/ad_ipa_sync.py
+
+[Install]
+WantedBy=multi-user.target
