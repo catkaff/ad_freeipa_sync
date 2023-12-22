@@ -1,0 +1,128 @@
+2023-12-22 15:09:50.170 INFO ad_ipa_sync - ad_connect: ==> AD_KD_Server adserver.dserver.cat connect_status: {'result': 0, 'description': 'success', 'dn': '', 'message': '', 'referrals': None, 'saslCreds': None, 'type': 'bindResponse'}
+
+2023-12-22 15:09:50.172 DEBUG connectionpool - _new_conn: Starting new HTTPS connection (1): ipa.kaff.cat:443
+2023-12-22 15:09:50.439 DEBUG connectionpool - _make_request: https://ipa.kaff.cat:443 "POST /ipa/session/login_password HTTP/1.1" 200 20
+2023-12-22 15:09:50.440 INFO client - _login: Successfully logged in as admin
+2023-12-22 15:09:50.440 DEBUG client - _request: Making ping request to https://ipa.kaff.cat/ipa/session/json with arguments [] and params {'version': '2.235'}
+2023-12-22 15:09:50.452 DEBUG connectionpool - _make_request: https://ipa.kaff.cat:443 "POST /ipa/session/json HTTP/1.1" 200 None
+2023-12-22 15:09:50.453 INFO ad_ipa_sync - connect_to_freeipa: Successfully connected and logged in to FreeIPA server: ipa.kaff.cat
+2023-12-22 15:09:50.453 INFO ad_ipa_sync - connect_to_freeipa: {'summary': 'IPA server version 4.9.12. API version 2.251'} => 2.235
+2023-12-22 15:09:50.463 INFO ad_ipa_sync - <module>: 
+BEGIN: AD groups and users:
+{'genesys_admins': {'adtest02@dserver.cat', 'adtest01@dserver.cat'},
+ 'smsgate': {'adtest05@dserver.cat', 'adtest07@dserver.cat'},
+ 'two-admins': {'adtest03@dserver.cat', 'adtest05@dserver.cat'}}
+
+2023-12-22 15:09:50.463 DEBUG client - _request: Making group_find request to https://ipa.kaff.cat/ipa/session/json with arguments [None] and params {'private': False, 'posix': False, 'external': True, 'nonposix': False, 'all': True, 'raw': False, 'no_members': True, 'pkey_only': False, 'version': '2.235'}
+2023-12-22 15:09:50.480 DEBUG connectionpool - _make_request: https://ipa.kaff.cat:443 "POST /ipa/session/json HTTP/1.1" 200 None
+2023-12-22 15:09:50.487 INFO ad_ipa_sync - <module>: BEGIN: IPA groups and users:
+{'genesys_admins': {'adtest02@dserver.cat', 'adtest01@dserver.cat'},
+ 'smsgate': {'adtest05@dserver.cat', 'adtest07@dserver.cat'},
+ 'two-admins': {'adtest03@dserver.cat', 'adtest05@dserver.cat'}}
+
+2023-12-22 15:09:50.487 DEBUG client - _request: Making group_find request to https://ipa.kaff.cat/ipa/session/json with arguments [None] and params {'private': False, 'posix': False, 'external': True, 'nonposix': False, 'all': True, 'raw': False, 'no_members': True, 'pkey_only': False, 'version': '2.235'}
+2023-12-22 15:09:50.544 DEBUG connectionpool - _make_request: https://ipa.kaff.cat:443 "POST /ipa/session/json HTTP/1.1" 200 None
+2023-12-22 15:09:50.550 INFO ad_ipa_sync - <module>: 
+Current status of groups and users on FreeIPA server after performed operations: 
+{'genesys_admins': {'adtest02@dserver.cat', 'adtest01@dserver.cat'},
+ 'smsgate': {'adtest05@dserver.cat', 'adtest07@dserver.cat'},
+ 'two-admins': {'adtest03@dserver.cat', 'adtest05@dserver.cat'}}
+
+2023-12-22 15:09:50.551 DEBUG client - _request: Making session_logout request to https://ipa.kaff.cat/ipa/session/json with arguments [] and params {'version': '2.235'}
+2023-12-22 15:09:50.559 DEBUG connectionpool - _make_request: https://ipa.kaff.cat:443 "POST /ipa/session/json HTTP/1.1" 200 None
+2023-12-22 15:10:22.073 INFO ad_ipa_sync - ad_connect: ==> AD_KD_Server adserver.dserver.cat connect_status: {'result': 0, 'description': 'success', 'dn': '', 'message': '', 'referrals': None, 'saslCreds': None, 'type': 'bindResponse'}
+
+2023-12-22 15:10:22.074 DEBUG connectionpool - _new_conn: Starting new HTTPS connection (1): ipa.kaff.cat:443
+2023-12-22 15:10:22.326 DEBUG connectionpool - _make_request: https://ipa.kaff.cat:443 "POST /ipa/session/login_password HTTP/1.1" 200 20
+2023-12-22 15:10:22.326 INFO client - _login: Successfully logged in as admin
+2023-12-22 15:10:22.326 DEBUG client - _request: Making ping request to https://ipa.kaff.cat/ipa/session/json with arguments [] and params {'version': '2.235'}
+2023-12-22 15:10:22.338 DEBUG connectionpool - _make_request: https://ipa.kaff.cat:443 "POST /ipa/session/json HTTP/1.1" 200 None
+2023-12-22 15:10:22.339 INFO ad_ipa_sync - connect_to_freeipa: Successfully connected and logged in to FreeIPA server: ipa.kaff.cat
+2023-12-22 15:10:22.339 INFO ad_ipa_sync - connect_to_freeipa: {'summary': 'IPA server version 4.9.12. API version 2.251'} => 2.235
+2023-12-22 15:10:22.348 INFO ad_ipa_sync - <module>: 
+BEGIN: AD groups and users:
+{'genesys_admins': {'adtest02@dserver.cat', 'adtest01@dserver.cat'},
+ 'smsgate': {'adtest05@dserver.cat', 'adtest07@dserver.cat'},
+ 'two-admins': {'adtest03@dserver.cat', 'adtest05@dserver.cat'}}
+
+2023-12-22 15:10:22.348 DEBUG client - _request: Making group_find request to https://ipa.kaff.cat/ipa/session/json with arguments [None] and params {'private': False, 'posix': False, 'external': True, 'nonposix': False, 'all': True, 'raw': False, 'no_members': True, 'pkey_only': False, 'version': '2.235'}
+2023-12-22 15:10:22.612 DEBUG connectionpool - _make_request: https://ipa.kaff.cat:443 "POST /ipa/session/json HTTP/1.1" 200 None
+2023-12-22 15:10:22.619 INFO ad_ipa_sync - <module>: BEGIN: IPA groups and users:
+{'genesys_admins': {'adtest02@dserver.cat', 'adtest01@dserver.cat'},
+ 'smsgate': {'adtest05@dserver.cat', 'adtest07@dserver.cat'},
+ 'two-admins': {'adtest03@dserver.cat', 'adtest05@dserver.cat'}}
+
+2023-12-22 15:10:22.619 DEBUG client - _request: Making group_find request to https://ipa.kaff.cat/ipa/session/json with arguments [None] and params {'private': False, 'posix': False, 'external': True, 'nonposix': False, 'all': True, 'raw': False, 'no_members': True, 'pkey_only': False, 'version': '2.235'}
+2023-12-22 15:10:22.882 DEBUG connectionpool - _make_request: https://ipa.kaff.cat:443 "POST /ipa/session/json HTTP/1.1" 200 None
+2023-12-22 15:10:22.889 INFO ad_ipa_sync - <module>: 
+Current status of groups and users on FreeIPA server after performed operations: 
+{'genesys_admins': {'adtest02@dserver.cat', 'adtest01@dserver.cat'},
+ 'smsgate': {'adtest05@dserver.cat', 'adtest07@dserver.cat'},
+ 'two-admins': {'adtest03@dserver.cat', 'adtest05@dserver.cat'}}
+
+2023-12-22 15:10:22.889 DEBUG client - _request: Making session_logout request to https://ipa.kaff.cat/ipa/session/json with arguments [] and params {'version': '2.235'}
+2023-12-22 15:10:22.896 DEBUG connectionpool - _make_request: https://ipa.kaff.cat:443 "POST /ipa/session/json HTTP/1.1" 200 None
+2023-12-22 15:10:36.291 INFO ad_ipa_sync - ad_connect: ==> AD_KD_Server adserver.dserver.cat connect_status: {'result': 0, 'description': 'success', 'dn': '', 'message': '', 'referrals': None, 'saslCreds': None, 'type': 'bindResponse'}
+
+2023-12-22 15:10:36.293 DEBUG connectionpool - _new_conn: Starting new HTTPS connection (1): ipa.kaff.cat:443
+2023-12-22 15:10:36.544 DEBUG connectionpool - _make_request: https://ipa.kaff.cat:443 "POST /ipa/session/login_password HTTP/1.1" 200 20
+2023-12-22 15:10:36.545 INFO client - _login: Successfully logged in as admin
+2023-12-22 15:10:36.545 DEBUG client - _request: Making ping request to https://ipa.kaff.cat/ipa/session/json with arguments [] and params {'version': '2.235'}
+2023-12-22 15:10:36.557 DEBUG connectionpool - _make_request: https://ipa.kaff.cat:443 "POST /ipa/session/json HTTP/1.1" 200 None
+2023-12-22 15:10:36.557 INFO ad_ipa_sync - connect_to_freeipa: Successfully connected and logged in to FreeIPA server: ipa.kaff.cat
+2023-12-22 15:10:36.557 INFO ad_ipa_sync - connect_to_freeipa: {'summary': 'IPA server version 4.9.12. API version 2.251'} => 2.235
+2023-12-22 15:10:36.566 INFO ad_ipa_sync - <module>: 
+BEGIN: AD groups and users:
+{'genesys_admins': {'adtest01@dserver.cat', 'adtest02@dserver.cat'},
+ 'smsgate': {'adtest05@dserver.cat', 'adtest07@dserver.cat'},
+ 'two-admins': {'adtest05@dserver.cat', 'adtest03@dserver.cat'}}
+
+2023-12-22 15:10:36.566 DEBUG client - _request: Making group_find request to https://ipa.kaff.cat/ipa/session/json with arguments [None] and params {'private': False, 'posix': False, 'external': True, 'nonposix': False, 'all': True, 'raw': False, 'no_members': True, 'pkey_only': False, 'version': '2.235'}
+2023-12-22 15:10:36.660 DEBUG connectionpool - _make_request: https://ipa.kaff.cat:443 "POST /ipa/session/json HTTP/1.1" 200 None
+2023-12-22 15:10:36.667 INFO ad_ipa_sync - <module>: BEGIN: IPA groups and users:
+{'genesys_admins': {'adtest01@dserver.cat', 'adtest02@dserver.cat'},
+ 'smsgate': {'adtest05@dserver.cat', 'adtest07@dserver.cat'},
+ 'two-admins': {'adtest05@dserver.cat', 'adtest03@dserver.cat'}}
+
+2023-12-22 15:10:36.667 DEBUG client - _request: Making group_find request to https://ipa.kaff.cat/ipa/session/json with arguments [None] and params {'private': False, 'posix': False, 'external': True, 'nonposix': False, 'all': True, 'raw': False, 'no_members': True, 'pkey_only': False, 'version': '2.235'}
+2023-12-22 15:10:36.931 DEBUG connectionpool - _make_request: https://ipa.kaff.cat:443 "POST /ipa/session/json HTTP/1.1" 200 None
+2023-12-22 15:10:36.938 INFO ad_ipa_sync - <module>: 
+Current status of groups and users on FreeIPA server after performed operations: 
+{'genesys_admins': {'adtest01@dserver.cat', 'adtest02@dserver.cat'},
+ 'smsgate': {'adtest05@dserver.cat', 'adtest07@dserver.cat'},
+ 'two-admins': {'adtest05@dserver.cat', 'adtest03@dserver.cat'}}
+
+2023-12-22 15:10:36.938 DEBUG client - _request: Making session_logout request to https://ipa.kaff.cat/ipa/session/json with arguments [] and params {'version': '2.235'}
+2023-12-22 15:10:36.945 DEBUG connectionpool - _make_request: https://ipa.kaff.cat:443 "POST /ipa/session/json HTTP/1.1" 200 None
+2023-12-22 15:12:23.031 INFO ad_ipa_sync - ad_connect: ==> AD_KD_Server adserver.dserver.cat connect_status: {'result': 0, 'description': 'success', 'dn': '', 'message': '', 'referrals': None, 'saslCreds': None, 'type': 'bindResponse'}
+
+2023-12-22 15:12:23.032 DEBUG connectionpool - _new_conn: Starting new HTTPS connection (1): ipa.kaff.cat:443
+2023-12-22 15:12:23.284 DEBUG connectionpool - _make_request: https://ipa.kaff.cat:443 "POST /ipa/session/login_password HTTP/1.1" 200 20
+2023-12-22 15:12:23.285 INFO client - _login: Successfully logged in as admin
+2023-12-22 15:12:23.285 DEBUG client - _request: Making ping request to https://ipa.kaff.cat/ipa/session/json with arguments [] and params {'version': '2.235'}
+2023-12-22 15:12:23.296 DEBUG connectionpool - _make_request: https://ipa.kaff.cat:443 "POST /ipa/session/json HTTP/1.1" 200 None
+2023-12-22 15:12:23.296 INFO ad_ipa_sync - connect_to_freeipa: Successfully connected and logged in to FreeIPA server: ipa.kaff.cat
+2023-12-22 15:12:23.296 INFO ad_ipa_sync - connect_to_freeipa: {'summary': 'IPA server version 4.9.12. API version 2.251'} => 2.235
+2023-12-22 15:12:23.306 INFO ad_ipa_sync - <module>: 
+BEGIN: AD groups and users:
+{'genesys_admins': {'adtest01@dserver.cat', 'adtest02@dserver.cat'},
+ 'smsgate': {'adtest07@dserver.cat', 'adtest05@dserver.cat'},
+ 'two-admins': {'adtest05@dserver.cat', 'adtest03@dserver.cat'}}
+
+2023-12-22 15:12:23.306 DEBUG client - _request: Making group_find request to https://ipa.kaff.cat/ipa/session/json with arguments [None] and params {'private': False, 'posix': False, 'external': True, 'nonposix': False, 'all': True, 'raw': False, 'no_members': True, 'pkey_only': False, 'version': '2.235'}
+2023-12-22 15:12:23.400 DEBUG connectionpool - _make_request: https://ipa.kaff.cat:443 "POST /ipa/session/json HTTP/1.1" 200 None
+2023-12-22 15:12:23.407 INFO ad_ipa_sync - <module>: BEGIN: IPA groups and users:
+{'genesys_admins': {'adtest01@dserver.cat', 'adtest02@dserver.cat'},
+ 'smsgate': {'adtest07@dserver.cat', 'adtest05@dserver.cat'},
+ 'two-admins': {'adtest05@dserver.cat', 'adtest03@dserver.cat'}}
+
+2023-12-22 15:12:23.407 DEBUG client - _request: Making group_find request to https://ipa.kaff.cat/ipa/session/json with arguments [None] and params {'private': False, 'posix': False, 'external': True, 'nonposix': False, 'all': True, 'raw': False, 'no_members': True, 'pkey_only': False, 'version': '2.235'}
+2023-12-22 15:12:23.670 DEBUG connectionpool - _make_request: https://ipa.kaff.cat:443 "POST /ipa/session/json HTTP/1.1" 200 None
+2023-12-22 15:12:23.677 INFO ad_ipa_sync - <module>: 
+Current status of groups and users on FreeIPA server after performed operations: 
+{'genesys_admins': {'adtest01@dserver.cat', 'adtest02@dserver.cat'},
+ 'smsgate': {'adtest07@dserver.cat', 'adtest05@dserver.cat'},
+ 'two-admins': {'adtest05@dserver.cat', 'adtest03@dserver.cat'}}
+
+2023-12-22 15:12:23.677 DEBUG client - _request: Making session_logout request to https://ipa.kaff.cat/ipa/session/json with arguments [] and params {'version': '2.235'}
+2023-12-22 15:12:23.685 DEBUG connectionpool - _make_request: https://ipa.kaff.cat:443 "POST /ipa/session/json HTTP/1.1" 200 None
