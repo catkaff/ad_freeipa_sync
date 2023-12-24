@@ -174,28 +174,85 @@ if __name__ == '__main__':
         logging.error(f"Произошла ошибка: {e}")
         sys.exit(1)
 
-    # Получение строки серверов из переменной окружения
+# Получение настроек из конфигурационного файла:
     ipaservers = os.getenv('ipa_server')
+    if ipaservers is None:
+        logging.error(f'Не удалось загрузить из конфигурационного файла значение: ipa_server')
+        sys.exit(1)
     # Разделение строки на список серверов с использованием регулярных выражений
     ipa_servers = re.split(r'\s*,\s*', ipaservers.strip())
+    
     ipaver_ssl = os.getenv('ipa_server_ca')
+    if ipaver_ssl is None:
+        logging.error(f'Не удалось загрузить из конфигурационного файла значение: ipa_server_ca')
+        sys.exit(1)
+
     ipausername = os.getenv('ipa_user_admin')
+    if ipausername is None:
+        logging.error(f'Не удалось загрузить из конфигурационного файла значение: ipa_user_admin')
+        sys.exit(1)
+
     ipapassword = os.getenv('ipa_user_admin_passwd')
+    if ipapassword is None:
+        logging.error(f'Не удалось загрузить из конфигурационного файла значение: ipa_user_admin_passwd')
+        sys.exit(1)
 
     ad_groups_dn = os.getenv('ad_groups_dn')
+    if ad_groups_dn is None:
+        logging.error(f'Не удалось загрузить из конфигурационного файла значение: ad_groups_dn')
+        sys.exit(1)
+
     ad_users_dn = os.getenv('ad_users_dn')
+    if ad_users_dn is None:
+        logging.error(f'Не удалось загрузить из конфигурационного файла значение: ad_users_dn')
+        sys.exit(1)
 
     ad_kd = os.getenv('ad_server')
+    if ad_kd is None:
+        logging.error(f'Не удалось загрузить из конфигурационного файла значение: ad_server')
+        sys.exit(1)
+    # Разделение строки на список серверов с использованием регулярных выражений
     ad_kds = re.split(r'\s*,\s*', ad_kd.strip())
+
     adca = os.getenv('ad_ca_sert')
+    if adca is None:
+        logging.error(f'Не удалось загрузить из конфигурационного файла значение: ad_ca_sert')
+        sys.exit(1)
+
     ad_user = os.getenv('ad_user')
+    if ad_user is None:
+        logging.error(f'Не удалось загрузить из конфигурационного файла значение: ad_user')
+        sys.exit(1)
+
     ad_user_password = os.getenv('ad_user_password')
+    if ad_user_password is None:
+        logging.error(f'Не удалось загрузить из конфигурационного файла значение: ad_user_password')
+        sys.exit(1)
 
     script_log_file = os.getenv('script_log_file')
+    if script_log_file is None:
+        logging.error(f'Не удалось загрузить из конфигурационного файла значение: script_log_file')
+        sys.exit(1)
+
     script_log_level = os.getenv('script_log_level')
+    if script_log_level is None:
+        logging.error(f'Не удалось загрузить из конфигурационного файла значение: script_log_level')
+        sys.exit(1)
+
     log_format = os.getenv('log_format')
+    if log_format is None:
+        logging.error(f'Не удалось загрузить из конфигурационного файла значение: log_format')
+        sys.exit(1)
+
     log_datefmt = os.getenv('log_datefmt')
+    if log_datefmt is None:
+        logging.error(f'Не удалось загрузить из конфигурационного файла значение: log_datefmt')
+        sys.exit(1)
+
     log_encoding = os.getenv('log_encoding')
+    if log_encoding is None:
+        logging.error(f'Не удалось загрузить из конфигурационного файла значение: log_encoding')
+        sys.exit(1)
 
     # Получим числовое значение уровня логирования
     level = logging.getLevelName(script_log_level)
